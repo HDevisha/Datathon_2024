@@ -1,0 +1,31 @@
+1. Library Importation
+
+    Imports necessary Python libraries for data manipulation, visualization, and modeling, including Pandas, NumPy, Matplotlib, and various Scikit-learn tools for preprocessing, model selection, ensemble methods, and metrics.
+
+2. Data Loading and Preparation
+
+    Loads a dataset named "FeatureSelection.csv" into a DataFrame.
+    Defines a target variable, presumably from the dataset, named "potential_total_value_of_award".
+    Prepares feature variables by dropping the target variable and any rows with missing values.
+    Displays the first few rows of the DataFrame for a quick overview.
+
+3. Feature Analysis
+
+    Identifies binary, low-cardinality, and high-cardinality features based on the number of unique values in each feature column.
+    Preprocesses features through one-hot encoding for categorical variables and standard scaling for numerical variables.
+
+4. Model Training and Evaluation
+
+    Splits the data into training and testing sets.
+    Trains and evaluates multiple regression models, including RandomForestRegressor and GradientBoostingRegressor.
+    Evaluates model performance using metrics such as R-squared and Root Mean Squared Error (RMSE).
+
+5. Feature Importance Analysis
+
+    Analyzes feature importance to identify which features significantly impact the model's predictions.
+    Based on the importance analysis, non-essential features are eliminated, and the model is retrained with a reduced set of features to potentially improve performance.
+
+6. Reduced Model Training and Evaluation
+
+    Repeats the model training and evaluation process with the reduced feature set for both RandomForestRegressor and GradientBoostingRegressor models.
+    Compares the performance of models trained with the reduced feature set against those trained with the original set of features, using R-squared and RMSE as metrics.
